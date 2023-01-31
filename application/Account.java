@@ -1,4 +1,5 @@
-package ProjectSemester2;
+
+package application;
 import java.util.*;
 public class Account {
     private int password;

@@ -1,4 +1,6 @@
-package ProjectSemester2;
+
+package application;
+
 import java.util.*;
 public class Teacher extends Account{
     private Periods periodone;

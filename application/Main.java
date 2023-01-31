@@ -1,12 +1,26 @@
-package ProjectSemester2;
+package application;
+	
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 
-import java.util.ArrayList;
 
-public class Main {
-    public static void main(String[] args) {
-        Assignments a = new Assignments("Balls", 0.13);
-        ArrayList<Assignments> baal = new ArrayList<>();
-        ArrayList<Assignments> baala = new ArrayList<>();
-
-    }
+public class Main extends Application {
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+			BorderPane root = new BorderPane();
+			Scene scene = new Scene(root, 400, 400);
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args)
+	{
+		launch(args);
+	}
 }
