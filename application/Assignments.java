@@ -1,4 +1,6 @@
+
 package application;
+
 import java.util.*;
 public class Assignments {
     private String name;
