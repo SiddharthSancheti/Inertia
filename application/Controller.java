@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
+import javafx.beans.property.*;
 import javafx.collections.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.*;
@@ -12,12 +13,15 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-public class Controller 
+public class Controller implements Initializable
 {
 	
-	private Stage primaryStage;
-	private Scene scene;
-	private Parent root;
+	@FXML private TableView<Student> tableView;
+	@FXML private TableColumn<Student, SimpleIntegerProperty> periodNumber;
+	@FXML private TableColumn<Student, SimpleStringProperty> className;
+	@FXML private TableColumn<Student, SimpleStringProperty> gradeLetter;
+	@FXML private TableColumn<Student, SimpleDoubleProperty> gradeDouble;
+	@FXML private TableColumn<Student, SimpleStringProperty> teacherName;
 	
 	public void changeSceneButtonPushed(ActionEvent event) throws IOException 
 	{
@@ -31,12 +35,6 @@ public class Controller
 		stage.show();
 	}
 	
-	@FXML private TableView<Student> tableView;
-	@FXML private TableColumn<Student, Integer> periodNumber;
-	@FXML private TableColumn<Student, String> className;
-	@FXML private TableColumn<Student, String> gradeLetter;
-	@FXML private TableColumn<Student, Double> gradeDouble;
-	@FXML private TableColumn<Student, String> teacherName;
 	
 	
 	/**
@@ -44,11 +42,11 @@ public class Controller
 	 */
 	public void initialize(URL url, ResourceBundle rb)
 	{
-		periodNumber.setCellValueFactory(new PropertyValueFactory<Student, Integer>("period"));
-		className.setCellValueFactory(new PropertyValueFactory<Student, String>("className"));
-		gradeLetter.setCellValueFactory(new PropertyValueFactory<Student, String> ("gradeLetter"));
-		gradeDouble.setCellValueFactory(new PropertyValueFactory<Student, Double>("gradeDouble"));
-		teacherName.setCellValueFactory(new PropertyValueFactory<Student,String>("teacherName"));
+		periodNumber.setCellValueFactory(new PropertyValueFactory<Student, SimpleIntegerProperty>("period"));
+		className.setCellValueFactory(new PropertyValueFactory<Student, SimpleStringProperty>("className"));
+		gradeLetter.setCellValueFactory(new PropertyValueFactory<Student, SimpleStringProperty> ("gradeLetter"));
+		gradeDouble.setCellValueFactory(new PropertyValueFactory<Student, SimpleDoubleProperty>("gradeDouble"));
+		teacherName.setCellValueFactory(new PropertyValueFactory<Student, SimpleStringProperty>("teacherName"));
 		
 		tableView.setItems(getStudent());
 	}
