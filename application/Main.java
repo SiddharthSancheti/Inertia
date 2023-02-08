@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package application;
 	
 import java.io.IOException;
@@ -11,7 +10,6 @@ import javafx.stage.Stage;
 import javafx.scene.*;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 import javafx.scene.text.*;
 
 
@@ -92,17 +90,4 @@ public class Main extends Application {
 		launch(args);
 	}
 }
-=======
-package ProjectSemester2;
 
-import java.util.ArrayList;
-
-public class Main {
-    public static void main(String[] args) {
-        Assignments a = new Assignments("Balls", 0.13);
-        ArrayList<Assignments> baal = new ArrayList<>();
-        ArrayList<Assignments> baala = new ArrayList<>();
-
-    }
-}
->>>>>>> origin/main

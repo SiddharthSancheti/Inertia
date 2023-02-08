@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 package application;
-=======
-package ProjectSemester2;
->>>>>>> origin/main
+
 
 import java.util.ArrayList;
 
