@@ -1,8 +1,8 @@
 package application;
 import javafx.beans.property.*;
-public class Student {
-	
-	public SimpleIntegerProperty period;
+public class Student 
+{	
+	private SimpleIntegerProperty period;
 	private SimpleStringProperty className, gradeLetter, teacherName;
 	private SimpleDoubleProperty gradeDouble;
 

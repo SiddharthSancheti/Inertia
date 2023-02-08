@@ -1,8 +1,5 @@
-<<<<<<< HEAD
+
 package application;
-=======
-package ProjectSemester2;
->>>>>>> origin/main
 import java.util.*;
 public class Assignments {
     private String name;
