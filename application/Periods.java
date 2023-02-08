@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package application;
+=======
+package ProjectSemester2;
+>>>>>>> origin/main
 import java.util.*;
 public class Periods {
     private ArrayList<Student> Students = new ArrayList<>();
