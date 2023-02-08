@@ -23,6 +23,11 @@ public class Controller implements Initializable
 	@FXML private TableColumn<Student, SimpleDoubleProperty> gradeDouble;
 	@FXML private TableColumn<Student, SimpleStringProperty> teacherName;
 	
+	/**
+	 * @author sid_s
+	 * @param event
+	 * @throws IOException
+	 */
 	public void changeSceneButtonPushed(ActionEvent event) throws IOException 
 	{
 		Parent MainUI = FXMLLoader.load(getClass().getResource("MainUI.fxml"));
@@ -34,8 +39,6 @@ public class Controller implements Initializable
 		stage.setScene(MainUIScene);
 		stage.show();
 	}
-	
-	
 	
 	/**
 	 * Initializes the controller class
@@ -51,6 +54,10 @@ public class Controller implements Initializable
 		tableView.setItems(getStudent());
 	}
 	
+	/**
+	 * @author sid_s
+	 * @return
+	 */
 	public ObservableList<Student> getStudent()
 	{
 		ObservableList<Student> student = FXCollections.observableArrayList();
@@ -65,3 +72,4 @@ public class Controller implements Initializable
 	}
 	
 }
+

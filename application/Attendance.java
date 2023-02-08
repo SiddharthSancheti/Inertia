@@ -2,7 +2,7 @@ package application;
 
 import javafx.beans.property.*;
 
-public class Attendance 
+public class Attendance
 {
 	private SimpleIntegerProperty absence, tardy;
 	private SimpleStringProperty className;
@@ -24,6 +24,5 @@ public class Attendance
 	
 	public String getClassName() { return className.get(); }
 	public void setClassName(SimpleStringProperty className) { this.className = className; }
-	
 	
 }
